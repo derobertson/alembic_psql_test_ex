@@ -1,4 +1,4 @@
-from sq_test.models import Parent
+from sq_test.models.parents import Parent
 from sq_test import db
 from . import main
 

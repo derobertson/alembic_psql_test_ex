@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from config import config
+from sq_test.models import import_all_modules
 
 db = SQLAlchemy()
 
@@ -13,5 +14,8 @@ def create_app(conf_env: str):
     app.register_blueprint(main_blueprint)
 
     db.init_app(app)
+    import_all_modules()
 
     return app
+
+

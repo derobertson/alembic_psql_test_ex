@@ -14,7 +14,9 @@ config = context.config
 fileConfig(config.config_file_name)
 
 from sq_test import db
-from sq_test.models import Parent, Child
+from sq_test.models import import_all_modules
+import_all_modules()
+
 target_metadata = db.metadata
 
 # other values from the config, defined by the needs of env.py,
